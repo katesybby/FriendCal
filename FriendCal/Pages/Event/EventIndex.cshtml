@@ -1,0 +1,37 @@
+@page
+@model EventIndexModel
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h1>Events</h1>
+
+<p>
+    <a asp-page="/Event/Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Location</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Events)
+        {
+            <tr>
+                <td>@item.Date.ToShortDateString()</td>
+                <td>@item.Title</td>
+                <td>@item.Location</td>
+                <td>
+                    <a asp-page="/Event/Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="/Event/Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="/Event/Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,4 +1,3 @@
-// User.cs
 namespace FriendCal.Models
 {
     public class User

@@ -1,16 +1,27 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.EntityFrameworkCore;
 using FriendCal.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace FriendCal
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddDbContext<AppDbContext>(options =>
+                options.UseInMemoryDatabase("FriendCal"));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -24,13 +35,6 @@ namespace FriendCal
                 app.UseExceptionHandler("/Error");
                 app.UseHsts();
             }
-
-            using (var scope = app.ApplicationServices.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                var context = services.GetRequiredService<AppDbContext>();
-                context.Database.EnsureCreated(); // Ensure database is created
-                SeedData.Initialize(services); // Seed the database
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

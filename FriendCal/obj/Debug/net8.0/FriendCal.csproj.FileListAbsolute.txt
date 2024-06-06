@@ -28,3 +28,6 @@
 /Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net8.0/FriendCal.pdb
 /Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net8.0/FriendCal.genruntimeconfig.cache
 /Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net8.0/ref/FriendCal.dll
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net8.0/FriendCal.csproj.AssemblyReference.cache
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net8.0/FriendCal.MvcApplicationPartsAssemblyInfo.cs
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net8.0/FriendCal.sourcelink.json

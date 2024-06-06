@@ -1,0 +1,10 @@
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.csproj.AssemblyReference.cache
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.GeneratedMSBuildEditorConfig.editorconfig
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.AssemblyInfoInputs.cache
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.AssemblyInfo.cs
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.csproj.CoreCompileInputs.cache
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.MvcApplicationPartsAssemblyInfo.cs
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.MvcApplicationPartsAssemblyInfo.cache
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.RazorAssemblyInfo.cache
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.RazorAssemblyInfo.cs
+/Users/katesyshepard/FriendCal/FriendCal/obj/Debug/net5.0/FriendCal.sourcelink.json

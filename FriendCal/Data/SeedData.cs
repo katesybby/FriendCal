@@ -1,11 +1,9 @@
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using FriendCal.Data;
 using FriendCal.Models;
 
-namespace FriendCal
+namespace FriendCal.Data
 {
     public static class SeedData
     {
@@ -14,17 +12,16 @@ namespace FriendCal
             using (var context = new AppDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<AppDbContext>>()))
             {
-                // Check if the database already has any users
+                // Look for any users.
                 if (context.Users.Any())
                 {
-                    return; // Database has been seeded
+                    return;   // DB has been seeded
                 }
 
-                // Seed sample users
                 context.Users.AddRange(
-                    new User { Name = "John", Username = "john@example.com", Password = "password123" },
-                    new User { Name = "Jane", Username = "jane@example.com", Password = "password456" },
-                    new User { Name = "Alice", Username = "alice@example.com", Password = "password789" }
+                    new User { Name = "Alice", Username = "alice", Password = "password1" },
+                    new User { Name = "Bob", Username = "bob", Password = "password2" },
+                    new User { Name = "Charlie", Username = "charlie", Password = "password3" }
                 );
 
                 context.SaveChanges();

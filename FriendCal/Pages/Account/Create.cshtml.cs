@@ -28,7 +28,6 @@ namespace FriendCal.Pages.Account
                 return Page();
             }
 
-            // Create a new User object with the provided input
             User newUser = new User
             {
                 Name = Input.Name,
@@ -36,13 +35,10 @@ namespace FriendCal.Pages.Account
                 Password = Input.Password
             };
 
-            // Add the new user to the database
             _context.Users.Add(newUser);
             _context.SaveChanges();
 
-            // Redirect to the index page
             return RedirectToPage("/Index");
         }
     }
 }
-
